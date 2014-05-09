@@ -525,7 +525,7 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #ec2a2a;/*8f7a66*/
+  background: #4d4d4d;/*restart 背景 颜色*/
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
