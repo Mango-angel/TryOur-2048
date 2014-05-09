@@ -1,13 +1,25 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  background:http://hiphotos.baidu.com/%b9%ed%d0%b0%d3%c4/pic/item/ad7b0fde5457a0d70eb3459d.jpg; 
-background-position:center; 
-background-repeat:no-repeat; 
+ // margin: 0;
+ // padding: 0;
+ // background: #faf8ef;
+ // color: #776e65;
+ // font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+ // font-size: 18px; }
+ div#div1{ 
+position:fixed; 
+top:0; 
+left:0; 
+bottom:0; 
+right:0; 
+z-index:-1; 
+} 
+div#div1 > img { 
+height:100%; 
+width:100%; 
+border:0; 
+} 
 
-  color: #776e65;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px; }
+
 
 body {
   margin: 0; }
