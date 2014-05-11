@@ -74,20 +74,9 @@
       </div>
     </div>
 
-
-
-
-
-
-
     <button id="easyMode_switcher_A">Easy Mode A</button>
     <button id="easyMode_switcher_B">Easy Mode B</button>
     
-    
-    
-    
-    
-   
     </div>
   </div>
   <script>
@@ -98,13 +87,13 @@
     var easyMode = false;
     var MyCheckValid = null;
     $('#easyMode_switcher_A').click(function(){
-      if(!confirm('开启简单模式A后，最大方块值超过32后，新产生的方块值将不小于min(最小方块值, 最大方块值/16)\n即使重新开始游戏也是如此，除非刷新页面\n确认开启？')){return false;}
+      if(!confirm('After num > 32，creat num range:[min, max/16]\nNotice:Only refresh to turn off.\nSure to turn it on？')){return false;}
       easyMode = true;
-      $(this).text('简单模式A已开启');
+      $(this).text('Easy Mode A on');
       return false;
     });
     $('#easyMode_switcher_B').click(function(){
-      if(!confirm('开启简单模式B后，最大的方块和相邻方块相差倍数不超过4倍就可以合并')){return false;}
+      if(!confirm('The max num can merge with the num<= max/4,\nNotice:Only refresh to turn off.\nSure to turn it on？')){return false;}
       MyCheckValid = function(next, tile, self){
         return next && !next.mergedFrom && (
           Math.max(next.value, tile.value) == self.grid.getMaxScore() ?
@@ -113,7 +102,7 @@
           );
         //return next && !next.mergedFrom && (Math.max(next.value, tile.value) <= 2*Math.min(next.value, tile.value));
       };
-      $(this).text('简单模式B已开启');
+      $(this).text('Easy Mode B on');
       return false;
     });
   </script>
