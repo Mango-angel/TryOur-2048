@@ -5,7 +5,7 @@ html, body {
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: #fb8821;
+  color: #fd0000;
   }
 } 
 
@@ -20,7 +20,7 @@ body {
 h1.title {
   font-size: 50px;
   font-weight: bold;
-  color: #fb8821;
+  color: #fd5300;
   margin: 0;
   display: block;
   float: left; }
