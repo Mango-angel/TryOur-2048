@@ -3,7 +3,9 @@ html, body {
   padding: 0;
   background-image: url(http://ww2.sinaimg.cn/small/80b6e873gw1egapmqjog0j20b50b4my1.jpg);
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  font-weight: bold;
+  }
 } 
 
 body {
