@@ -528,11 +528,11 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #4d4d4d;/*restart 背景 颜色f9f6f2*/
+  background: #e259ff;/*restart 背景 颜色4d4d4d*/
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: #e259ff;e259ff
+  color: #f9f6f2;
   height: 40px;
   line-height: 42px;
   display: block;
