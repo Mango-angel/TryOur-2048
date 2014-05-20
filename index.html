@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" name="baidu-tc-cerfication" src="http://apps.bdimg.com/cloudaapi/lightapp.js#f27c696706370aae85eb1c846e7d8d33"></script><script type="text/javascript">window.bd && bd._qdc && bd._qdc.init({app_id: '860e4c7604769dd0c2f7355e'});</script>
+<script type="text/javascript" name="baidu-tc-cerfication" src="http://apps.bdimg.com/cloudaapi/lightapp.js#f27c696706370aae85eb1c846e7d8d33"></script><script type="text/javascript">
+window.bd && bd._qdc && bd._qdc.init({app_id: '860e4c7604769dd0c2f7355e'});
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
   <meta charset="utf-8">
-  <title>Molecule</title>
-  <link href="http://Mango-angel.github.io/Tryour-2048/style/main-5.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="http://Mango-angel.github.io/Tryour-2048/favicon.ico">
-  <link rel="apple-touch-icon" href="http://Mango-angel.github.io/Tryour-2048/meta/apple-touch-icon.png">
-  <style>.button{color:white;text-decoration:none;padding:10px;margin:auto;background:#8f7a66;border:2px solid #000;}</style>
+  <title>Memory</title>
+  <link href="http://Mango-angel.github.io/TryOur-2048/style/main-5.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="http://Mango-angel.github.io/TryOur-2048/favicon.ico">
+  <link rel="apple-touch-icon" href="http://Mango-angel.github.io/TryOur-2048/meta/apple-touch-icon.png">
+  <style>
+  .button{color:white;text-decoration:none;padding:10px;margin:auto;background:#8f7a66;border:2px solid #000;}#apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 10;
+}
+  #apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 11;
+}
+  body,td,th {
+	color: #FFFF00;
+}
+  </style>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="heading">
-      <h1 class="title">Closed Beta</h1>
-      <p class="game-intro">Ver 2.0</p>
+      <h1 class="title">Dignity</h1>
+      <p class="game-intro">Ver 3.0</p>
     </div> 
     <div class="above-game">
       <a class="restart-button">Restat</a>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
-      </div>
+      </div> 
+    </div>
+    <div id="apDiv1">
+      <p><img src="http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2twm6ej20rs0hd0y4.jpg" width="620" height="388" usemap="#Map">
+        <map name="Map">
+          <area shape="rect" coords="278,323,347,359" href="#" onClick="MM_showHideLayers('apDiv1','','hide')">
+        </map>
+      </p>
     </div>
     <div class="game-container">
       <div class="game-message">
@@ -39,36 +71,36 @@
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
-                </div>
+        </div>
               <div class="grid-row">
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
-                </div>
+        </div>
               <div class="grid-row">
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
-                </div>
+        </div>
               <div class="grid-row">
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
-                </div>
+        </div>
               <div class="grid-row">
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
-                </div>
-            </div>
+        </div>
+      </div>
 
       <div class="tile-container">
       </div>
@@ -78,72 +110,72 @@
     
     <button id="easyMode_switcher_B">Easy Mode B</button>
     -->
-    </div>
+</div>
   </div>
   <script>
-    var my_list = {2:'http://ww1.sinaimg.cn/small/80b6e873gw1egaop89oo4j20bx0bvq3f.jpg',
-    4:'http://ww2.sinaimg.cn/small/80b6e873gw1egaop24isqj20go0b4gm6.jpg',
-    8:'http://ww4.sinaimg.cn/small/80b6e873gw1egaoolct1uj202s02raai.jpg',
-    16:'http://ww4.sinaimg.cn/small/80b6e873gw1egaop6nlh4j214k0xwmyc.jpg',
-    32:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egapy9um8mj204k04lwec.jpg',
-    64:'http://ww2.sinaimg.cn/small/80b6e873gw1egaoorcwxoj20ge0hu0ti.jpg',
-    128:'http://ww2.sinaimg.cn/small/80b6e873gw1egaoouat4ij209u0e4mxg.jpg',
-    256:'http://ww3.sinaimg.cn/small/80b6e873gw1egaoom4mp0j207u06qq39.jpg',
-    512:'http://ww1.sinaimg.cn/small/80b6e873gw1egaoo90vt3j208d08ojru.jpg',
-    1024:'http://ww1.sinaimg.cn/small/80b6e873gw1egapoafvt3j20qo0u8myt.jpg',
-    2048:'http://ww2.sinaimg.cn/small/80b6e873gw1egaop7jfdsj20vo0thgmz.jpg',
-    4096:'http://ww2.sinaimg.cn/small/80b6e873gw1egaoo8eijjj203a02s0tb.jpg',
-    8192:'http://ww2.sinaimg.cn/small/80b6e873gw1egaoouat4ij209u0e4mxg.jpg',
-    16384:'http://ww1.sinaimg.cn/small/80b6e873gw1egaootrmp8j20di0dk3z3.jpg',
-    32768:'http://ww3.sinaimg.cn/small/80b6e873gw1egaqao6639j20ts0vw0to.jpg',
-    65536:'http://ww1.sinaimg.cn/small/80b6e873gw1egapy8nyw5j20ci0duaac.jpg',
-    131072:'http://ww2.sinaimg.cn/small/80b6e873gw1egaopbkzfyj20np0zkqag.jpg',
-    262144:'http://ww4.sinaimg.cn/small/80b6e873gw1egaqd4ekbjj20c00ckt97.jpg',
-    524288:'http://ww2.sinaimg.cn/small/80b6e873gw1egaoos87woj203903it9g.jpg',
-    1048576:'http://ww2.sinaimg.cn/small/80b6e873gw1egaoo9ls5jj2051054q3b.jpg',
-    2097152:'http://ww1.sinaimg.cn/small/80b6e873gw1egaqeycpfcj2024029dfq.jpg',
-    4194304:'http://ww3.sinaimg.cn/small/80b6e873gw1egaoonmolyj202k024glu.jpg',
-    8388608:'http://ww2.sinaimg.cn/small/80b6e873gw1egaop11ocej20k00mq0tf.jpg',
-    16777216:'http://ww1.sinaimg.cn/small/80b6e873gw1egapy9bfesj20b20a5t8p.jpg',
-    33554432:'http://ww2.sinaimg.cn/small/80b6e873gw1egaop1p3j9j209n0a6wey.jpg',
-    67108864:'http://ww3.sinaimg.cn/small/80b6e873gw1egaqkwzc4jj20bi0ciaa6.jpg',
-    134217728:'http://ww3.sinaimg.cn/small/80b6e873gw1egaqkwhuedj20b00e0dfw.jpg',
-    268435456:'http://ww1.sinaimg.cn/small/80b6e873gw1egaqkzn5eaj20bi0c6q2y.jpg',
-    536870912:'http://ww2.sinaimg.cn/small/80b6e873gw1egaqkydmyaj206m082q2t.jpg',
-    1073741824:'http://ww4.sinaimg.cn/small/80b6e873gw1egaoosrizuj209i0900t1.jpg',
-    2147483648:'http://ww1.sinaimg.cn/small/80b6e873gw1egaoot0c36j20gv0f4aaf.jpg'}
+    var my_list = {2:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2aaseqj203p03pglk.jpg',
+    4:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2asezsj20go0godg7.jpg',
+    8:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2b5pe9j202s02r3yh.jpg',
+    16:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2bdsqbj208c08cdfr.jpg',
+    32:'http://ww3.sinaimg.cn/mw690/80b6e873gw1egkz2bv00aj204k04lq2w.jpg',
+    64:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2cawp3j205305k747.jpg',
+    128:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2cy93bj20dc0dct8w.jpg',
+    256:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2d789ej204r04rq31.jpg',
+    512:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2dj2qkj205c05k747.jpg',
+    1024:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2dwn13j204w04wt8s.jpg',
+    2048:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2edwmvj2056056q33.jpg',
+    4096:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2engkwj208c08cq2y.jpg',
+    8192:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2ezq2ej202s02saa1.jpg',
+    16384:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2fc1afj205j05jjrf.jpg',
+    32768:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2g6s9kj205005074e.jpg',
+    65536:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2fsk4cj20560560st.jpg',
+    131072:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2ghmzhj2069069jrf.jpg',
+    262144:'http://ww3.sinaimg.cn/mw690/80b6e873gw1egkz2gt9svj205b05baa5.jpg',
+    524288:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2h875sj203903ijre.jpg',
+    1048576:'http://ww3.sinaimg.cn/mw690/80b6e873gw1egkz2hnqloj2051051dfw.jpg',
+    2097152:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2i0bhfj2024024mx1.jpg',
+    4194304:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2ixnmcj20240240sk.jpg',
+    8388608:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2l3jjxj204w04wwei.jpg',
+    16777216:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2lhwk9j2053053q2w.jpg',
+    33554432:'http://ww3.sinaimg.cn/mw690/80b6e873gw1egkz2lsy54j2059059q32.jpg',
+    67108864:'http://ww2.sinaimg.cn/mw690/80b6e873gw1egkz2md7bgj20540540sr.jpg',
+    134217728:'http://ww3.sinaimg.cn/mw690/80b6e873gw1egkz2mnwbgj204d04dt8o.jpg',
+    268435456:'http://ww1.sinaimg.cn/mw690/80b6e873gw1egkz2mzoeuj2059059t8r.jpg',
+    536870912:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2nrs8wj204k04kgll.jpg',
+    1073741824:'http://ww3.sinaimg.cn/mw690/80b6e873gw1egkz2owkkxj2059059t8p.jpg',
+    2147483648:'http://ww4.sinaimg.cn/mw690/80b6e873gw1egkz2qbqo5j204z04zaa2.jpg'}
     
     var my_mark = {2:'Defeat, HiScore: 2',
-    4:'Defeat, HiScore: 4',
+    4:'Defeat（*>.<*） , HiScore: 4',
     8:'Defeat, HiScore: 8',
-    16:'Defeat, HiScore: 16',
-    32:'Defeat, HiScore: 32',
-    64:'Defeat, HiScore: 64',
-    128:'Defeat, HiScore: 128',
-    256:'Defeat, HiScore: 256',
-    512:'Defeat, HiScore: 512',
-    1024:'Defeat, HiScore: 1024',
-    2048:'Defeat, HiScore: 2048',
-    4096:'Defeat, HiScore: 4096',
-    8192:'Defeat, HiScore: 8192',
-    16384:'Defeat, HiScore: 16384',
-    32768:'Defeat, HiScore: 32768',
-    65536:'Defeat, HiScore: 65536',
-    131072:'65536',
-    262144:'131072',
-    524288:'262144',
-    1048576:'524288',
-    2097152:'1048576',
-    4194304:'2097152',
-    8388608:'4194304',
-    16777216:'8388608',
-    33554432:'16777216',
-    67108864:'33554432',
-    134217728:'67108864',
-    268435456:'134217728',
-    536870912:'268435456',
-    1073741824:'536870912',
-    2147483648:'1073741824'}
+    16:'Defeat~（*>.<*）  HiScore: 16',
+    32:'Defeat~（*>.<*）  只见到金洋...',
+    64:'Defeat~（*>.<*）  Veke下一个是谁...',
+    128:'Defeat~ ( > c < ) 捞Du...想打死他',
+    256:'Defeat~（*>.<*） 思丁..',
+    512:'Defeat~（*>.<*） 萌健不易合吧...',
+    1024:'Defeat~ (→_→) 小云回眸一笑..呵呵',
+    2048:'Defeat~ (^_-) 到大神出现，已经2048啦...',
+    4096:'Defeat~ § ^_^ §  7头..你猜下一个..',
+    8192:'Defeat~ （╯＾╰） 找不到蛋蛋的照片，这个顶用..',
+    16384:'Defeat~ （⊙ο⊙） 丹枝。。',
+    32768:'Defeat~ （*+﹏+*） 金纺，呵呵',
+    65536:'Defeat~ （ˇ＾ˇ） bear~~',
+    131072:'Defeat~ (^o^)~~ 见到鑫鑫啦..~',
+    262144:'Defeat~ ^.vv.^  霸气的Bra',
+    524288:'Defeat~ =_=凸  好不容易啊....',
+    1048576:'Defeat~ d(˙_˙)b 慧慧..革命就快成功~',
+    2097152:'Defeat~ p^.^q  东明草啦~加油!!  ',
+    4194304:'Defeat~ ($_$)  首富~~',
+    8388608:'Defeat~ （>_<） 德培出现..',
+    16777216:'Defeat~ ^(oo)^ 呵呵，不解释啦',
+    33554432:'Defeat~ （UoU） 到谁了..快疯了吧.. ',
+    67108864:'Defeat~ (O^~^O) 琳，只能说加油了，',
+    134217728:'Defeat~ v(^O^)v 嘉裕兄。呵呵',
+    268435456:'Defeat~ Y(^_^)Y 紫洋啦，最后三个...',
+    536870912:'Defeat~  m(-_-)m 老师出没..',
+    1073741824:'Defeat~ (^0^)y-°° 猜Boss！！',
+    2147483648:'(＝^ω^＝)'}
     var my_goal = 2147483648;
     var my_win  = 'Victor';/* 胜利 描述*/
     var easyMode = false;
@@ -168,15 +200,15 @@
       return false;
     });
   </script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/bind_polyfill.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/classlist_polyfill.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/animframe_polyfill.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/keyboard_input_manager.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/html_actuator.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/grid.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/tile.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/local_storage_manager.js"></script>
-  <script src="http://Mango-angel.github.io/Tryour-2048/js/game_manager.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/bind_polyfill.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/classlist_polyfill.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/animframe_polyfill.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/keyboard_input_manager.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/html_actuator.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/grid.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/tile.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/local_storage_manager.js"></script>
+  <script src="http://Mango-angel.github.io/TryOur-2048/js/game_manager.js"></script>
   <script>
     // Wait till the browser is ready to render the game (avoids glitches)
     window.requestAnimationFrame(function (){
@@ -197,3 +229,4 @@
       </script>
 </body>
 </html>
+
