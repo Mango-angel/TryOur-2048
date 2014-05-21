@@ -152,7 +152,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #2d2b29; /*bbada0-----------------------------------------*/
+  background: #2d2b29; /* 游戏 容器 颜色bbada0-----------------------------------------*/
   border-radius: 6px;
   width: 620px;
   height: 620px;
@@ -186,7 +186,7 @@ hr {
       margin-top: 59px; }
     .game-container .game-message a {
       display: inline-block;
-      background: #8f7a66;  /* ??*/
+      background: #3ddfac;  /*8f7a66 ??*/
       border-radius: 3px;
       padding: 0 20px;
       text-decoration: none;
